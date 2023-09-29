@@ -1,14 +1,17 @@
 const express = require('express');
 const puppeteer = require('puppeteer');
 const handlebars = require('handlebars');
+const cors = require("cors")
 const fs = require('fs');
 const app = express();
-const port = 3000; // Adjust the port as needed
+app.use(cors())
+const port = 8080; // Adjust the port as needed
 
 app.use(express.json());
 
 app.post('/generate-pdf', async (req, res) => {
   const { data } = req.body;
+  console.log(data);
 
   // Read the Handlebars template file
   const templateSource = fs.readFileSync('template.hbs', 'utf8');
