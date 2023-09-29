@@ -15,6 +15,11 @@
     "handlebars": "^4.7.8",
     "nodemon": "^3.0.1",
     "pdfkit": "^0.13.0",
-    "puppeteer": "^21.2.1"
+    "puppeteer": "^21.3.6"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.23.0",
+    "@babel/core": "^7.23.0",
+    "@babel/preset-env": "^7.22.20"
   }
 }
