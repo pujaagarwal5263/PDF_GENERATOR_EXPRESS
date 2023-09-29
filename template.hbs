@@ -2,12 +2,29 @@
 <html>
 <head>
     <title>CardioCare Medical Report</title>
-    <!-- Add your CSS styles here -->
-    <style>
+       <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 20px;
+            padding: 0;
+        }
+        .header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+           
+        }
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+        .container {
+            margin: 20px;
         }
         h1 {
             color: #333;
@@ -26,17 +43,33 @@
             padding: 8px;
             text-align: left;
         }
-        th {
-            background-color: #f2f2f2;
+    
+           .patient-info {
+            display: flex;
+            justify-content: space-between;
         }
-        /* Add more CSS styles as needed */
+        h4 {
+            flex: 1;
+        }
+          .recommendations {
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
-    <h1>CardioCare Medical Report</h1>
-    <h2>Patient Information</h2>
-    <h5>Age: {{age}}</h5>
-    <h5>Gender: {{sex}}</h5>
+    <div class="header">
+        <h1>CardioCare Medical Report</h1>
+    </div>
+      <div class="container">
+    <h2 class="header">Patient Information</h2>
+      <div class="patient-info">
+            <h4>Name: {{name}}</h4>
+            <h4>Gender: {{sex}}</h4>
+        </div>
+        <div class="patient-info">
+            <h4>Age: {{age}} yrs</h4>
+            <h4>Date: {{date}}</h4>
+        </div>
     <table>
         <tr>
             <th>Attribute</th>
@@ -48,15 +81,15 @@
         </tr>
         <tr>
             <td>Resting Blood Pressure (trestbps in mm Hg)</td>
-            <td>{{restingBloodPressure}}</td>
+            <td>{{restingBloodPressure}}mm Hg</td>
         </tr>
         <tr>
             <td>Serum Cholesterol (chol in mg/dL)</td>
-            <td>{{serumCholesterol}}</td>
+            <td>{{serumCholesterol}} mg/dL</td>
         </tr>
         <tr>
             <td>Fasting Blood Sugar (fbs in mg/dL)</td>
-            <td>{{fastingBloodSugar}}</td>
+            <td>{{fastingBloodSugar}} mg/dL</td>
         </tr>
         <tr>
             <td>Resting Electrocardiographic Results</td>
@@ -64,7 +97,7 @@
         </tr>
         <tr>
             <td>Maximum Heart Rate Achieved (thalach)</td>
-            <td>{{maxHeartRateAchieved}}</td>
+            <td>{{maxHeartRateAchieved}} bpm</td>
         </tr>
         <tr>
             <td>Has Exercise Induced Pain</td>
@@ -86,7 +119,25 @@
             <td>Thalium Stress Result (thal)</td>
             <td>{{thaliumStressResult}}</td>
         </tr>
-        <!-- Add more rows for other attributes -->
     </table>
+     <div class="recommendations">
+    <h2>Recommendations</h2>
+    <p>Based on the assessment of your cardiovascular health, we recommend the following:</p>
+    <ol>
+        <li><strong>Regular Exercise:</strong> Incorporate at least 150 minutes of moderate aerobic exercise per week. Consult your healthcare provider before starting any new exercise program.</li>
+        <br/>
+        <li><strong>Heart-Healthy Diet:</strong> Limit the consumption of saturated and trans fats, as well as sodium (salt). Monitoring your diet can help manage cholesterol levels and blood pressure.</li>
+    </ol>
+   </div>
+       <hr/>
+          <div class="signature">
+            <p>System Generated on {{date}}</p>
+            <p>Cardio Care Pvt. Ltd.</p>
+        </div>
+    
+    </div>
+     <div class="footer">
+        &copy; 2023 CardioCare Medical Center
+    </div>
 </body>
 </html>
