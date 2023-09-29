@@ -11,6 +11,7 @@ This is the readme with payload structure.
     "date":"2023-10-01 11:00PM",
     "age":23,
     "sex":"female",
+    "comments":"Potential heart disease detected",
     "chestPainType":"Typical Angina",
     "restingBloodPressure":120,
     "serumCholesterol":342,
